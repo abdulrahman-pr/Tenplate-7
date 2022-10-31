@@ -1,0 +1,322 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue-sky :#0891f8;
+    --transition:.3s
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(images/body_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    padding: 15px 0;
+}
+
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav .logo img {
+    cursor: pointer;
+}
+
+/* .links {
+    flex: 1;
+} */
+
+.links ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+.links ul li a  {
+    text-decoration: none;
+    color: #000;
+    padding: .5rem 1rem;
+    transition: var(--transition);
+}
+
+.links ul li a:hover , 
+.links ul li  a.active ,
+.links ul li  a:focus {
+    color: var(--blue-sky);
+}
+
+
+/* screen so small */
+
+@media (max-width:420px) {
+    nav .logo {
+        width: 100%;
+    }
+    nav .logo img {
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    nav .links {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+.landing {
+    padding: 50px 0;
+    background-image: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.landing .container {
+    display: flex;
+}
+
+
+.landing-text h3 {
+    padding: 20px 0;
+}
+
+.landing-text p {
+    line-height: 1.7;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    font-weight: 300;
+}
+
+.landing-text .btn {
+    background-color: #fff;
+    color: var(--blue-sky);
+    border: none;
+    outline: none;
+    padding: .8rem 1.5rem;
+    border-radius: 6px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.landing-text .btn:hover {
+    border-radius: 20px;
+}
+
+@media (max-width:767px) {
+    .landing .container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .landing-img {
+        order: -1;
+    }
+    .landing-img img {
+        width: 300px;
+    }
+    .landing-text p {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+.business-section {
+    padding: 50px 0;
+}
+
+.business-section .container .business-content {
+    text-align: center;
+}
+
+.business-content h2 span:first-child {
+    color: var(--blue-sky);
+    font-size: 22px;
+}
+
+.business-content h2 span:last-child {
+    font-weight: 900;
+    letter-spacing: .5mm;
+    font-size: 30px;
+}
+
+.business-content p {
+    line-height: 1.7;
+    color: #888;
+}
+
+.business-content img {
+    max-width: 100%;
+    padding: 30px 0;
+    cursor: pointer;
+}
+
+.business-content .btn {
+    background-color: var(--blue-sky);
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: .8rem 1.5rem;
+    border-radius: 6px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.business-content .btn:hover {
+    border-radius: 20px;
+}
+
+
+.projects img {
+    max-width: 70%;
+}
+
+.test-content {
+    text-align: center;
+    text-transform: capitalize;
+    line-height: 2;
+}
+
+.test-content h3 {
+    color: var(--blue-sky);
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.review {
+    margin: 20px 0;
+    padding: 60px;
+    text-align: center;
+    background-color: rgba(135, 207, 235, 0.353);
+    border-radius: 10px;
+    position: relative;
+}
+
+.review img {
+    position: absolute;
+    width: 60px;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+}
+
+.review p::after {
+    content: "ali nader";
+    width: 100px;
+    padding: 20px;
+    position: absolute;
+    bottom: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.review p::before {
+    content: "application devloper at microsoft";
+    padding: 20px;
+    position: absolute;
+    bottom: -110px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width:767px) {
+    .review p::before {
+        content: "application devloper at microsoft";
+        width: 250px;
+        padding: 20px;
+        position: absolute;
+        bottom: -140px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.contact {
+    padding: 50px 0;
+    margin-top: 100px ;
+    text-align: center;
+}
+
+.contact h3 {
+    color: var(--blue-sky);
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+form {
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 6px;
+}
+
+form input ,textarea {
+    width: 100%;
+    padding: .5rem 1rem;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 2px solid #ddd;
+}
+
+.contact .btn {
+    background-color: var(--blue-sky);
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: .8rem 2rem;
+    border-radius: 6px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+::placeholder {
+    text-transform: capitalize;
+}
+
+.social-links {
+    text-align: center;
+}
+
+.social-links i {
+    font-size: 22px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.social-links i:hover {
+    color: var(--blue-sky);
+    transform: scale(1.5);
+}
